@@ -2,3 +2,5 @@
 echo "please enter the user name"  #text entered here will be added to the variable
 read -s USERNAME       #here, USERNAME is variable name
 echo "username entered : $USERNAME"
+echo "please enter password:"
+read -s PASSWORD
