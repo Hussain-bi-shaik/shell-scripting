@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "please enter the user name"  #text entered here will be added to the variable
+read USERNAME       #here, USERNAME is variable name
+echo "username entered : $USERNAME"
