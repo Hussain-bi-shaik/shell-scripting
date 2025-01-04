@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "ram :: hello"
+echo "rose :: hii"
+echo "ram :: how are you"
+echo "rose :: fine"
