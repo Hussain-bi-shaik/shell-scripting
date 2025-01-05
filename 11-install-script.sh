@@ -32,4 +32,6 @@ if [ $? -ne 0 ]  # $? is to check exit status to the above command it is already
               else
                 echo "installing git ...succesfull"
             fi
+      else
+            echo "git is already installed"      
   fi                                      
