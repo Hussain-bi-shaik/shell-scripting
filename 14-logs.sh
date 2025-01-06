@@ -36,15 +36,15 @@ if [ $USERID -ne 0 ]
             dnf install mysql -y &>>$LOG_FILE_NAME
             VALIDATE $? "installing mysql"
     else    
-         echo -e "my sql is already...$Y installed $NUMBER"
+         echo -e "my sql is already...$Y installed $N"
  fi
 
  dnf list installed git &>>$LOG_FILE_NAME
 
  if [ $? -ne 0 ] 
     then
-            install dnf git -y &>>$LOG_FILE_NAME
+            dnf install git -y &>>$LOG_FILE_NAME
             VALIDATE $? "installing git"
      else
-          echo -e "git is already...$Y installed"
-fi               
+          echo -e "$Y git is already..installed $N"
+fi
