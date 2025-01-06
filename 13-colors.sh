@@ -9,7 +9,7 @@ VALIDATE(){
                 echo -e "$2 $R failure"
                 exit 1
      else
-        echo -E "$2 $G success"
+        echo -e "$2 $G success"
 
      fi              
 }
@@ -24,7 +24,7 @@ if [ $USERID -ne 0 ]
             dnf install mysql -y
             VALIDATE $? "installing mysql"
     else    
-         echo -e "$Y my sql is already installed"
+         echo -e "my sql is already $Y installed"
  fi
 
  dnf list installed git
@@ -33,5 +33,5 @@ if [ $USERID -ne 0 ]
             install dnf git -y
             VALIDATE $? "installing git"
      else
-          echo echo -e "$Y git is already installed"
+          echo -e "git is already $Y installed"
 fi               
