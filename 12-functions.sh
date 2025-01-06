@@ -19,7 +19,7 @@ if [ $USERID -ne 0 ]
  if [ $? -ne 0 ]  
     then
             dnf install mysql -y
-            VALIDATE $? "installing my sql"
+            VALIDATE $? "installing mysql"
     else    
          echo "my sql is already installed"
  fi
@@ -28,6 +28,7 @@ if [ $USERID -ne 0 ]
  if [ $? -ne 0 ] 
     then
             install dnf git -y
+            VALIDATE $? "installing git"
      else
           echo "git is already installed"
 fi               

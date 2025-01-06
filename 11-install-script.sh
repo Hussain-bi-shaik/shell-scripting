@@ -1,5 +1,5 @@
 #!/bin/bash
-USERID=$(id -u)  # id -u is to check the id of current user
+USERID=$(id -u)  # id -u is to check the id of current user. root user id is 0
 
 if [ $USERID -ne 0 ]
   then
