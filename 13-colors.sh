@@ -6,16 +6,16 @@ Y="\e[33m"
 VALIDATE(){
     if [ $1 -ne 0 ]
         then    
-                echo -e "$2  $R failure"
+                echo -e "$2 $R failure"
                 exit 1
      else
-        echo -E "$2  $G success"
+        echo -E "$2 $G success"
 
      fi              
 }
 if [ $USERID -ne 0 ]
     then
-         echo -e " $R error :: you must have root access to execute the command"
+         echo -e "$R error :: you must have root access to execute the command"
          exit 1
  fi
  dnf list installed mysql
@@ -24,7 +24,7 @@ if [ $USERID -ne 0 ]
             dnf install mysql -y
             VALIDATE $? "installing mysql"
     else    
-         echo -e " $Y my sql is already installed"
+         echo -e "$Y my sql is already installed"
  fi
 
  dnf list installed git
@@ -33,5 +33,5 @@ if [ $USERID -ne 0 ]
             install dnf git -y
             VALIDATE $? "installing git"
      else
-          echo echo -e " $Y git is already installed"
+          echo echo -e "$Y git is already installed"
 fi               
