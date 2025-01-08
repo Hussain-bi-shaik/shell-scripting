@@ -54,6 +54,7 @@ then
              do 
                 echo "deleting file: $filepath" &>>$LOG_FILE_NAME
                 rm -rf $filepath
+                echo "deleted files : $filepath"
              done <<<$FILES
           else
                 echo -e "$R Error: $N failed to create zip file"
