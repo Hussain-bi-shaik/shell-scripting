@@ -38,7 +38,7 @@ then
       exit 1
   fi        
 
-  echo "script started executing at: $TIMESTAMP" 
+  echo "script started executing at: $TIMESTAMP"  &>>$LOG_FILE_NAME
   FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
   if [ -n "$FILES" ] # true if there are files to zip.-n is used to verify if there are any files that need to be processed
@@ -52,7 +52,7 @@ then
              echo -e "successfully created zip files for files older than $DAYS"
              while read -r filepath 
              do 
-                echo "deleting file: $filepath"
+                echo "deleting file: $filepath" &>>$LOG_FILE_NAME
                 rm -rf $filepath
              done <<<$FILES
           else
