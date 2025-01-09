@@ -13,5 +13,5 @@ do
      fi
      done <<<$DISK_USAGE
      echo -e "message: $MSG"
-     exho "$ MSG | mutt -5 High disk usage" shabanashaik745@gmail.com 
+     echo "$ MSG | mutt -5 High disk usage" shabanashaik745@gmail.com 
            
